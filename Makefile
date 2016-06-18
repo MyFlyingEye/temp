@@ -1,2 +1,2 @@
 all:
-	gcc ToughProcess.c
+	gcc zombie.c
