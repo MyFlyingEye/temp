@@ -1,2 +1,2 @@
 all:
-	gcc zombie.c
+	gcc pipes_system.c -o /home/box/shell
