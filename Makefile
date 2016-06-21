@@ -1,2 +1,2 @@
 all:
-	gcc pipes_system.c -o /home/box/shell
+	gcc /home/box/temp/fifo.c -o /home/box/fifo
