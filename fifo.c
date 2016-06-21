@@ -10,8 +10,8 @@ int main() {
   mkfifo(chname_one, mode);
   mkfifo(chname_two, mode);
 
-  int in = open(chname_one, O_RDONLY | O_NONBLOCK);
-  int out = open(chname_two, O_WRONLY | O_NONBLOCK);
+  int in = open(chname_one, O_RDONLY);
+  int out = open(chname_two, O_WRONLY);
 
   char buf[256];
 
