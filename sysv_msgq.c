@@ -9,6 +9,10 @@
 #define MSG_PERM 0666
 
 int main() {
+  if (!fork()) {
+    execl("/tmp/test", "/tmp/test", NULL);
+  }
+
   key_t key = ftok("/tmp/msg.temp", 1);
 
   int msgq = msgget(key, MSG_PERM | IPC_CREAT);
