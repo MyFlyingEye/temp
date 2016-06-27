@@ -9,13 +9,10 @@
 #define MSG_PERM 0666
 
 int main() {
-  if (!fork()) {
-    execl("/tmp/test", "/tmp/test", NULL);
-  }
-
   key_t key = ftok("/tmp/msg.temp", 1);
 
   int msgq = msgget(key, MSG_PERM | IPC_CREAT);
+  fprintf(stderr, "Queue id: %d\n", msgq);
 
   struct my_msg {
     long mtype;
@@ -24,7 +21,8 @@ int main() {
   bzero(&data, sizeof(data));
 
   ssize_t msglen = msgrcv(msgq, &data, 80, 0, 0);
-  if (msglen > 0) {
+  fprintf(stderr, "Message length: %ld", msglen);
+  if (msglen <= 0) {
     perror("msgrcv");
     exit(EXIT_FAILURE);
   }
