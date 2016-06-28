@@ -1,2 +1,2 @@
 all:
-	gcc sysv_shm.c -o shm
+	gcc posix_shm.c -lrt -o shm
