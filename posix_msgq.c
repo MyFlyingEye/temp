@@ -5,6 +5,8 @@
 #include <unistd.h>
 
 int main() {
+  mq_unlink("/test.mq");
+
   mqd_t mqd = mq_open("/test.mq", O_CREAT | O_RDONLY, 0666, NULL);
 
   char buf[256];
