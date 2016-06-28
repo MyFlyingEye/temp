@@ -1,2 +1,2 @@
 all:
-	gcc posix_sem.c -pthread -o sem
+	gcc sysv_shm.c -o shm
