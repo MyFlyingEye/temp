@@ -28,16 +28,3 @@ int main() {
 
   exit(EXIT_SUCCESS);
 }
-
-struct mq_attr {
-  long mq_flags;
-  long mq_maxmsg;  // max len of queue (max num of queues)
-  // do not set when create queue:
-  long mq_msgsize;  // max size of message
-  long mq_curmsgs;  // current num of messages
-}
-
-    We can change only O_NONBLOCK
-
-int mq_getattr(mqd, *attr)  // load attrs
-    int mq_setattr(mqd, *attr, *oldattr);
