@@ -1,2 +1,2 @@
 all:
-	gcc posix_msgq.c -lrt -o queue
+	gcc sysv_sem.c -o sem
