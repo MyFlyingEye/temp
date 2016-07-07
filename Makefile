@@ -1,3 +1,3 @@
 all:
-	g++ mutex.cpp -pthread -std=c++11
-	cp /home/box/temp/mutex.cpp /home/box/main.cpp
+	g++ conditions.cpp -pthread -std=c++11
+	cp /home/box/temp/conditions.cpp /home/box/main.cpp
