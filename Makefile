@@ -1,2 +1,2 @@
 all:
-	gcc posix_shm.c -lrt -o shm
+	g++ main.cpp -pthread -std=c++11
